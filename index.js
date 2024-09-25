@@ -26,21 +26,7 @@
 
 
         
-  const history=document.getElementById('history-id');
-  history.addEventListener('click',function (){
-
-    const main =document.getElementById('main-d');
-    main.classList.add('hidden');
-
-    const move =document.getElementById('history');
-    move.classList.remove('hidden');
-    
-    const mov =document.getElementById('donationid');
-    mov.classList.remove('color1');
-
-    
-    const ove =document.getElementById('history-id');
-    ove.classList.add('color1');
+ 
     
     const historyItem = document.createElement('div');
     historyItem.className = "bg-blue p-4 rounded-lg border-2 border-pink-500";
@@ -48,7 +34,7 @@
     <h1 class="text-2xl text-gray-500">$${inputNoakali.toFixed(2)}taka donate for famine-2024 at  fani,Bangladesh </h1>
    <p class="text-xs text-gray-500">${new Date().toUTCString()} </p> `
    const historyContainer = document.getElementById('naokali-h');
-    historyContainer.insertBefore(historyItem,historyContainer.firstChild); })
+    historyContainer.insertBefore(historyItem,historyContainer.firstChild);
      }else{
        alert('please type valid input')
        const remove =document.getElementById('modal');
@@ -80,30 +66,14 @@
       const remove =document.getElementById('modal');
       remove.classList.add('hidden');
       document.getElementById('f-input-donation').value='';
-    }
-    const history=document.getElementById('history-id');
-       history.addEventListener('click',function (){
-     
-         const main =document.getElementById('main-d');
-         main.classList.add('hidden');
-     
-         const move =document.getElementById('history');
-         move.classList.remove('hidden');
-         
-         const mov =document.getElementById('donationid');
-         mov.classList.remove('color1');
-     
-         
-         const ove =document.getElementById('history-id');
-         ove.classList.add('color1');
-         
+    }    
          const historyItem = document.createElement('div');
          historyItem.className = "bg-blue p-4 rounded-lg border-2 border-pink-500";
          historyItem.innerHTML = ` 
          <h1 class="text-2xl text-gray-500">$${inputfani.toFixed(2)}taka donate for flood-2024 at  fani,Bangladesh </h1>
         <p class="text-xs text-gray-500">${new Date().toUTCString()} </p> `
-        const historyContainer = document.getElementById('fani-h');
-         historyContainer.insertBefore(historyItem,historyContainer.firstChild); })
+         const historyContainer = document.getElementById('fani-h');
+         historyContainer.insertBefore(historyItem,historyContainer.firstChild); 
   })
 
  
@@ -133,21 +103,7 @@
       document.getElementById('q-input-donation').value='';
     }
 
-    const history=document.getElementById('history-id');
-       history.addEventListener('click',function (){
-     
-         const main =document.getElementById('main-d');
-         main.classList.add('hidden');
-     
-         const move =document.getElementById('history');
-         move.classList.remove('hidden');
-         
-         const mov =document.getElementById('donationid');
-         mov.classList.remove('color1');
-     
-         
-         const ove =document.getElementById('history-id');
-         ove.classList.add('color1');
+
          
          const historyItem = document.createElement('div');
          historyItem.className = "bg-blue p-4 rounded-lg border-2 border-pink-500";
@@ -155,14 +111,29 @@
          <h1 class="text-2xl text-gray-500">$${inputquota.toFixed(2)}taka donate for quotq-2024 at  Dhaka university,Bangladesh </h1>
         <p class="text-xs text-gray-500">${new Date().toUTCString()} </p> `
         const historyContainer = document.getElementById('quota-h');
-         historyContainer.insertBefore(historyItem,historyContainer.firstChild); })
+         historyContainer.insertBefore(historyItem,historyContainer.firstChild);
   })
 
+  const history=document.getElementById('history-id');
+  history.addEventListener('click',function (){
+
+    const main =document.getElementById('main-d');
+    main.classList.add('hidden');
+
+    const move =document.getElementById('history');
+    move.classList.remove('hidden');
+    
+    const mov =document.getElementById('donationid');
+    mov.classList.remove('color1');
+
+    
+    const ove =document.getElementById('history-id');
+    ove.classList.add('color1');
+})
 
 
-
-  const donation=document.getElementById('donationid');
-  donation.addEventListener('click',function (){
+  const onation=document.getElementById('donationid');
+  onation.addEventListener('click',function (){
     document.getElementById('main-d').classList.remove('hidden');
 
     document.getElementById('donationid').classList.add('color1');
@@ -175,3 +146,47 @@
 
 
   
+
+
+  document.getElementById('homes').onclick= function(){
+    window.location.href='index.html';
+  }
+
+  // document.getElementById('blog').onclick= function (){
+  //   window.location.href="blog.html";
+  // }
+
+
+
+  const donation = document.getElementById('donation-main-btn');
+const historys = document.getElementById('history-main-btn');
+
+historys.addEventListener('click', function(){
+
+  const btnCr = document.getElementById('donation-main-btn');
+  btnCr.classList.remove('color1');
+
+  const btnlr = document.getElementById('history-main-btn');
+  btnlr.classList.add('color1');
+  
+  const hidToadd = document.getElementById('history');
+  hidToadd.classList.remove('hidden');
+  
+  const addTohide = document.getElementById('donation');
+  addTohide.classList.add('hidden');
+});
+donation.addEventListener('click', function(){
+
+  const btnCr = document.getElementById('donation-main-btn');
+  btnCr.classList.add('color1');
+
+  const btnlr = document.getElementById('history-main-btn');
+  btnlr.classList.remove('color1');
+  
+  const hidToadd = document.getElementById('history');
+  hidToadd.classList.add('hidden');
+
+  const addTohide = document.getElementById('donation');
+  addTohide.classList.remove('hidden');
+});
+

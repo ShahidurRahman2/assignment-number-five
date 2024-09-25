@@ -35,14 +35,14 @@ header {
   <header class=" ">
     <div class="navbar bg-base-500 px-6 sticky-header ">
         <div class="navbar-start">
-            <a class="btn  color1">Blog</a>
+            <a id="blog" class="btn  color1">Blog</a>
         </div>
          <div class="navbar-center flex">
             <div>
                 <img src="assets/logo.png" alt="">
             </div>
                 <div>
-                     <h1>Donate Bangladesh</h1>
+                     <h1 class="sm:hidden">Donate Bangladesh</h1>
                     </div>
             </div>
          
@@ -187,6 +187,12 @@ header {
       <footer class="py-12  mt-8">
 
       </footer> 
+
+      <script>
+        document.getElementById('blog').onclick= function(){
+        window.location.href='blog.html';
+         }
+      </script>
       <script src="utilities.js"></script>
     <script src="index.js"></script>
   </body>
